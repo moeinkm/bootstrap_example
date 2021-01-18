@@ -4,6 +4,16 @@
 
 سوال۱:
 
-س
+a. False
+
+b. True
+
+c. False
+
+d. True
+
+سوال۲:
+
+
 
 </div>
