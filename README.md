@@ -99,7 +99,7 @@ const useWindowsWidth = () => {
 export default useWindowsWidth;
 ```
 
-<div dir="rtl>
+<div dir="rtl">
 در فانکشن زیر هنگام تغییر استیت فرضاً رندر جدید برگرداده میشود         
 
 </div>
