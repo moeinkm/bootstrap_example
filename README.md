@@ -71,7 +71,27 @@ v2:
 
 "/v2/read"
 
+روی پورت 8080
+
 سوال۴:
+هوک ها توابعی ساده اند که به ما اجازه می دهند از قابلیت های  state و lifecycle در react بدون استفاده از ساختار class در کامپوننت هایی که به صورت تابع هستند استفاده کنیم
+
+```
+import { useState, useEffect } from "react";
+const useWindowsWidth = () => {
+    const [isSmall, setIsSmall] = useState(false);
+    let checkScreenSize = () => {
+        setIsSmall(window.innerWidth < 600); // result is boolean
+    };
+    useEffect(() => {
+        checkScreenSize();
+        window.addEventListener("resize", checkScreenSize); // call when the window size changes
+        return () => window.removeEventListener("resize", checkScreenSize);
+    }, []);
+    return isSmall;
+};
+export default useWindowsWidth;
+```
 
 
 </div>
