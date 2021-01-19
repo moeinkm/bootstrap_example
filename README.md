@@ -19,8 +19,8 @@ xss به نوعی از حمله گفته میشه که یک اسکریئت در 
 کد زیر رو در نظر بگیرید
 
 </div>
-```
 
+```
 // request data
 const body={
     name: "<script>alert('xss attack')</script>"
@@ -29,19 +29,18 @@ const body={
 get('/', function (req, res) {
     req.body.name;
 });
-
 ```
+
 <div dir="rtl">
 در این کد یک ریکوئست گت نام کاربر را فرضا میگیرد و در یک جایی نگه میدارد، اگر مهاجم به جای نام کاربری اسکریپتی را بفرستد در هنگام فرضا فراخوانی یا نمایش نام این اسکریپت اجرا میشود، برای جلوگیری از اجرای آن میتوانیم این اسکریپت را به عنوان فرضا تایپ استرینگ  میگیریم تا قابل اجرا نباشد به صورت زید
 </div>
-```
 
+```
 // use sanitizer package
 get('/', function (req, res) {
     //Sanitize user input
     req.body.sanitize('name').xss();
 });
-
 ```
 
 <div dir="rtl">
