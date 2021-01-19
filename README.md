@@ -74,7 +74,13 @@ v2:
 روی پورت 8080
 
 سوال۴:
+
 هوک ها توابعی ساده اند که به ما اجازه می دهند از قابلیت های  state و lifecycle در react بدون استفاده از ساختار class در کامپوننت هایی که به صورت تابع هستند استفاده کنیم
+
+این یک هوک کاستوم است که با تغییر استیت صفحه و تغییر عرض آن به کمتر از ۶۰۰ پیکسل استیت isSmall ترو میشود 
+
+</div>
+
 
 ```
 import { useState, useEffect } from "react";
@@ -93,5 +99,32 @@ const useWindowsWidth = () => {
 export default useWindowsWidth;
 ```
 
+<div dir="rtl>
+در فانکشن زیر هنگام تغییر استیت فرضاً رندر جدید برگرداده میشود         
+
+</div>
+
+```
+import React from 'react'
+import useWindowWidth from './useWindowWidth.js'
+const MyComponent = () => {
+  const onSmallScreen = useWindowWidth();
+  return (
+    // Return some elements
+  )
+}
+```
+
+<div dir="rtl>
+
+سوال۵:
+
+الف) در session کاربر ذخیره میکنیم
+
+
+ب) در ردیس توزیع شده ذخیره می کنیم
+
+
+ج)
 
 </div>
